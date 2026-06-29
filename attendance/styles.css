@@ -1,0 +1,120 @@
+/* 大忠國小 · 作息時間與學生請假 — 配色：深綠 × 暖橙 × 米白 */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #FBF5E8;
+  color: #3C4A36;
+  font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+.en { font-family: 'Fredoka', sans-serif; }
+
+/* ---------- HEADER ---------- */
+.site-header { background: #2D5A3D; padding: 60px 24px 52px; }
+.header-inner { max-width: 920px; margin: 0 auto; }
+.badge {
+  display: inline-block;
+  background: #ED8C3E; color: #2A2620;
+  font-weight: 700; font-size: 0.8125rem; letter-spacing: 2px;
+  padding: 7px 16px; border-radius: 999px; margin-bottom: 18px;
+}
+.site-header h1 {
+  margin: 0 0 10px;
+  font-size: clamp(2rem, 5vw, 3rem); font-weight: 900;
+  color: #fff; letter-spacing: 2px; line-height: 1.15;
+}
+.subtitle {
+  margin: 0;
+  font-family: 'Fredoka', sans-serif; font-size: 1rem;
+  color: #DCEBC2; letter-spacing: 2px;
+}
+
+/* ---------- MAIN ---------- */
+.main {
+  max-width: 920px; margin: 0 auto;
+  padding: 56px 24px 80px;
+  display: flex; flex-direction: column; gap: 48px;
+}
+
+.section-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 20px; }
+.section-num { font-family: 'Fredoka', sans-serif; font-size: 1.125rem; font-weight: 700; color: #ED8C3E; }
+.main h2 { margin: 0; font-size: 1.625rem; font-weight: 900; color: #2A2620; letter-spacing: 1px; }
+.section-desc { margin: -12px 0 20px; font-size: 0.9375rem; color: #51604A; }
+
+/* ---------- TABLE ---------- */
+.table-card {
+  background: #FFFCF3; border: 2px solid #E6EDD3; border-radius: 22px;
+  overflow: hidden; box-shadow: 0 12px 30px rgba(23,107,63,.07);
+}
+.schedule { border-collapse: collapse; width: 100%; font-size: 0.96875rem; }
+.schedule th, .schedule td { padding: 14px 12px; text-align: center; vertical-align: middle; }
+.schedule thead th { font-weight: 700; letter-spacing: 1px; }
+.th-main { background: #2D5A3D; color: #fff; border-right: 1px solid rgba(255,255,255,.18); }
+.th-main .time { font-family: 'Fredoka', sans-serif; font-weight: 500; font-size: 0.8125rem; color: #DCEBC2; }
+.th-group { background: #3F7A2E; color: #fff; padding: 12px; }
+.th-sub { background: #EAF0DA; color: #2D5A3D; padding: 11px 12px; border-top: 1px solid #E6EDD3; }
+.th-sub + .th-sub { border-left: 1px solid #E6EDD3; }
+.schedule tbody th[scope="row"] {
+  background: #F7F3E4; color: #2A2620; font-weight: 700; white-space: nowrap;
+}
+.schedule tbody tr > * { border-top: 1px solid #EFEAD9; }
+.schedule tbody th[scope="row"],
+.schedule tbody td:not(:last-child) { border-right: 1px solid #EFEAD9; }
+.schedule tbody td { color: #3C4A36; }
+.cell-all { background: #FBF8EE; }
+.t { font-family: 'Fredoka', sans-serif; color: #3F7A2E; font-weight: 600; }
+
+/* ---------- NOTICE LIST ---------- */
+.notice-card {
+  background: #FFFCF3; border: 2px solid #E6EDD3; border-radius: 22px;
+  padding: 14px 28px; box-shadow: 0 12px 30px rgba(23,107,63,.06);
+}
+.notice-item { display: flex; gap: 16px; align-items: flex-start; padding: 18px 0; border-bottom: 1px solid #EFEAD9; }
+.notice-item:last-child { border-bottom: 0; }
+.notice-item p { margin: 0; font-size: 1.0625rem; color: #3C4A36; }
+.dot { flex: none; width: 10px; height: 10px; border-radius: 999px; background: #ED8C3E; margin-top: 9px; }
+
+/* ---------- LEAVE ---------- */
+.leave-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.card {
+  background: #FFFCF3; border: 2px solid #E6EDD3; border-radius: 22px;
+  padding: 26px 28px; box-shadow: 0 12px 30px rgba(23,107,63,.06);
+}
+.pill {
+  display: inline-block; font-weight: 700; letter-spacing: 1px;
+  padding: 5px 13px; border-radius: 999px; font-size: 0.8125rem; margin-bottom: 18px;
+}
+.pill-green { color: #2D5A3D; background: #E4EECE; }
+.pill-orange { color: #2A2620; background: #FFBA3D; }
+.card .notice-item:first-of-type { padding-top: 0; }
+.card .notice-item:last-of-type { padding-bottom: 0; }
+
+.phone-card {
+  background: #2D5A3D; border: 2px solid #2D5A3D; border-radius: 22px;
+  padding: 26px 28px; box-shadow: 0 12px 30px rgba(23,107,63,.18);
+}
+.phone-row + .phone-row { margin-top: 18px; }
+.phone-label { display: block; font-size: 0.875rem; color: #DCEBC2; letter-spacing: 1px; margin-bottom: 4px; }
+.phone-num { font-family: 'Fredoka', sans-serif; font-size: 1.375rem; font-weight: 700; color: #FFBA3D; text-decoration: none; letter-spacing: 1px; }
+.phone-card .ext { color: #fff; font-size: 1rem; }
+
+.law-bar {
+  margin-top: 20px; background: #EAF0DA; border: 2px solid #E0E6CE; border-radius: 22px;
+  padding: 22px 28px; display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: space-between; gap: 16px;
+}
+.law-bar p { margin: 0; font-size: 1.0625rem; color: #3C4A36; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #ED8C3E; color: #2A2620; font-weight: 700; font-size: 1rem;
+  padding: 13px 26px; border-radius: 999px; text-decoration: none;
+  box-shadow: 0 10px 24px rgba(244,167,43,.35); transition: background .15s ease;
+}
+.btn:hover, .btn:focus { background: #FFBA3D; }
+a:focus-visible, .btn:focus-visible { outline: 3px solid #2D5A3D; outline-offset: 2px; }
